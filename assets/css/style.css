@@ -1,0 +1,57 @@
+body{
+    background: black;
+    /* font-family: 'Questrial', sans-serif; */
+    /* font-family: 'Barlow', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif;  */
+    /* font-family: 'Cantarell', sans-serif; */
+    font-family: 'KoHo', sans-serif;
+    /* font-family: 'Hind Guntur', sans-serif;    */
+}
+img{
+    height: 200px;
+}
+#title-area{
+    font-size: 100px;
+    color: rgb(252, 1, 1);
+    text-align: center;
+    font-weight: 100;
+    border: 1px solid rgb(252, 1, 1);
+    margin-top: 20px;
+}
+form{
+    border: 1px solid rgb(9, 48, 218);
+    padding: 10px 20px 10px 40px;
+    margin-top: 20px;
+    color: rgb(66, 99, 243);
+}
+#submit-btn{
+    background: black;
+    color: rgb(66, 99, 243);
+    margin-bottom: 28px;
+}
+#user-input{
+    background: darkgray
+}
+.new-button{
+    margin: 3px;
+    background-color: black;
+    border: 1px solid rgb(152, 201, 79);
+    color: rgb(152, 201, 79)
+
+}
+.new-button:hover{
+    border: 1px solid rgb(79, 79, 248);
+    color:rgb(79, 79, 248)
+}
+#gif-area{
+    margin-top: 20px;
+    margin-left: -15px;
+    padding: 10px;
+    background:black;
+    border: 1px solid orange;
+    color: orange;
+}
+.image-box{
+    display: inline-block;
+    margin-right: 10px;
+}
