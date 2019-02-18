@@ -119,7 +119,7 @@ $(document).on('click', '.get-url-btn', function(e){
   console.log("node value: " , e.target.attributes[1].value)
     modal.style.display = "block";
     
-    $('.modal-content').prepend(e.target.attributes[1].value)
+    $('.modal-p').append(e.target.attributes[1].value)
 });
 
 
