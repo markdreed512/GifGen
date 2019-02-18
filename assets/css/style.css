@@ -8,7 +8,10 @@ body{
     /* font-family: 'Hind Guntur', sans-serif;    */
 }
 img{
-    height: 200px;
+    height: 150px;
+}
+#button-area{
+    margin-top: 20px;
 }
 #title-area{
     font-size: 100px;
@@ -30,7 +33,8 @@ form{
     margin-bottom: 28px;
 }
 #user-input{
-    background: darkgray
+    background: darkgray;
+    width: 90%;
 }
 .new-button{
     margin: 3px;
@@ -44,6 +48,7 @@ form{
     color:rgb(79, 79, 248)
 }
 #gif-area{
+    text-align: center;
     margin-top: 20px;
     margin-left: -15px;
     padding: 10px;
