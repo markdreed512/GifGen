@@ -1,11 +1,3 @@
-
-
-
-// var JSONreadyTopics = JSON.stringify(topics)
-// localStorage.setItem('topicsStr', JSONreadyTopics)
-// topics = localStorage.getItem('topicsStr');//needs to be converted back from JSON I think
-
-
 var topics = [
   "Game of Thrones", 
   "Breaking Bad", 
@@ -19,7 +11,7 @@ var topics = [
   "Arrested Development"
 ]
 
-var userInput = ""
+var userInput = "";
 
 function renderButtons(){
   
@@ -31,7 +23,6 @@ function renderButtons(){
  
   
 }
-
 renderButtons()
 var list = JSON.parse(localStorage.getItem("savedButtons"));
 console.log("list on refresh: ", list)
@@ -85,9 +76,19 @@ $(document).on('click', '.new-button', function(){
       'data-animate-url': response.data[i].images.original.url
       });
       var lineBreak = $('<br>');
+      var lineBreak2 = $('<br>');
       var rating =  "Rating: " + response.data[i].rating.toUpperCase()
-    
-     imageContainer.append(rating, lineBreak, image)
+      var getUrlBtn = $('<button>').append('Get URL')
+      getUrlBtn.addClass("get-url-btn")
+      getUrlBtn.css({
+        width: "100%",
+        backgroundColor: "#303133",
+        color: "green",
+        marginBottom: "10px"
+        });
+      getUrlBtn.attr('data-url', response.data[i].images.original.url)
+      
+     imageContainer.append(rating, lineBreak, image, lineBreak2,getUrlBtn)
      
      $('#gif-area').prepend(imageContainer).css("display", "block")
 
@@ -108,12 +109,32 @@ $(document).on('click', '.pic', function(event){
   }
 })
 
-  //my giphy key: 4lPzNQgi0E1cKkFOEX0d0GOjRmXH1zxz
+//modal functionality
+var modal = document.getElementById('simpleModal');
+var modalBtn = $('#modalBtn');
+var closeBtn = $('#closeBtn');
+$(document).on('click', '.get-url-btn', function(e){
+  console.log("e: " , e)
 
-  //it should:
-  //1. DONE- add a button with the user text
-  //2. DONE-populate gifs when clicked
-  //3. check before creating button for empty input
-  //4. DONE-use userInput from textbox
-  //5. save previous buttons
-  //6. DONE- add new gifs before old ones
+  console.log("node value: " , e.target.attributes[1].value)
+    modal.style.display = "block";
+    
+    $('.modal-content').prepend(e.target.attributes[1].value)
+});
+
+
+$('#closeBtn').on('click', closeModal);
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+window.addEventListener('click', clickOutside);
+
+function clickOutside(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+  

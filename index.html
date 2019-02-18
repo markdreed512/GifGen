@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Barlow|Cantarell|Hind+Guntur|KoHo|Orbitron|Questrial" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Cantarell|Hind+Guntur|KoHo|Orbitron|Questrial"
+        rel="stylesheet">
 
     <title>Giphy App</title>
 </head>
-<body>
-    
 
-    
+<body>
+
+
+
     <div class="container">
-        <div class="row"id="button-area"></div>   
+        <div class="row" id="button-area"></div>
         <div class="row">
-            <div class="col-sm-9" id="title-area"><p>GIF.GEN</p></div>
+            <div class="col-sm-9" id="title-area">
+                <p>GIF.GEN</p>
+            </div>
             <div class="col-sm-3 ">
-                    <form id="form">
-                            <label for="user-input">Add to Favorites:</label>
-                            <input type="text" id="user-input" placeholder=""><br><br>
-                            <input id="submit-btn" type="submit" value="Submit">
-                    </form>
-                   
+                <form id="form">
+                    <label for="user-input">Add to Favorites:</label>
+                    <input type="text" id="user-input" placeholder=""><br><br>
+                    <input id="submit-btn" type="submit" value="Submit">
+                </form>
+
             </div>
         </div>
 
         <div id="gif-area" style="display: none">
         </div>
+
+        <!-- modal -->
+        <div id="simpleModal" class="mmodal">
+            <div class="modal-content">
+                <p></p>
+                <button id="closeBtn">OK</button>
+            </div>
+        </div>
+    </div>
     </div>
 
 
@@ -37,7 +52,9 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
